@@ -14,7 +14,7 @@ app.get('/', function (req, res) {
 app.get('/meteoreunion', function (req, res) {
     let apiKey = '9031a16cca38c0d72febca223b7ed774';
     let city = 'reunion';
-    let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`
+    let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`
     
     
     request(url, function (err, response, body) {
@@ -36,7 +36,7 @@ app.get('/meteoreunion', function (req, res) {
 app.get('/meteoparis', function (req, res) {
   let apiKey = '00b9eb2e243bd4cfcb0b80a1af26b339';
   let city = 'paris';
-  let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`
+  let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`
   
   
   request(url, function (err, response, body) {
@@ -54,7 +54,7 @@ app.get('/meteoparis', function (req, res) {
     app.get('/meteomoscow', function (req, res) {
       let apiKey = '60a10e7e71ed6eca9cc9979d0ca8bdd8';
       let city = 'moscow';
-      let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`
+      let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`
       
       
       request(url, function (err, response, body) {
@@ -72,7 +72,7 @@ app.get('/meteoparis', function (req, res) {
         app.get('/meteomarseille', function (req, res) {
           let apiKey = '1413c88504f339fc6c5f6f57ff50c75d';
           let city = 'marseille';
-          let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`
+          let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`
           
           
           request(url, function (err, response, body) {
@@ -91,33 +91,30 @@ app.get('/meteoparis', function (req, res) {
   
 });
 
-app.get('/meteomarseille', function (req, res) {
-
-  
-  
-  request(, function (err, response, body) {
-  
-      if(err){
-        console.log('error:', error);
-      } else {
-
-        console.log('body:', body);
-     
-        res.json(response)
-      }
-    });
-
-
-})
-})
-
-
-  
 
 
 
 
+// app.get('/meteo_pays', function (req, res) {
+//   const apiKey = "1413c88504f339fc6c5f6f57ff50c75d";
+//   const reunion = "6690283";
+//   const paris = "2988507";
+//   const marseille = "2995469";
+//   const moscow = "524901";
+//   const url = "http://api.openweathermap.org/data/2.5/group?id=" + reunion + "," + paris + "," + marseille + "," + moscow + "&lang=fr&units=metric&appid=" + apiKey;
+//   request(url, function (err, response, body) {
+//       if (err) {
+//           console.log(err);
+//       } else {
+//           const weather = JSON.parse(body);
+//           res.json(weather.list);
+//       }
+//   })
 
+// });
+
+
+})})
 
 
 

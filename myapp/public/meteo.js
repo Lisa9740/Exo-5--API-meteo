@@ -7,10 +7,11 @@ $(function () {
         success: function (datas) {
             
            var donnees = JSON.parse(datas.body);
+    
 
         //    console.log(donnees)
             // $.each(donnees, function (index, element) {
-                var temperature = "temperature pour aujourd'hui : " + donnees.main.temp 
+                var temperature = "temperature pour  : " + donnees.main.temp+"°" 
                 var name =  donnees.name
             //     var name = element.name
             $(".donnes").append( "<h2 class='mt-3'>" + name + "</h2><br/>"  )
@@ -30,7 +31,7 @@ $(function () {
 
         //    console.log(donnees)
             // $.each(donnees, function (index, element) {
-                var temperature = "temperature pour aujourd'hui : " + donnees.main.temp 
+                var temperature = "temperature pour aujourd'hui : " + donnees.main.temp +"°"
                 var name =   donnees.name
             //     var name = element.name
             $(".donnes").append( "<h2 class='mt-3'>" + name + "</h2><br/>" )
@@ -51,7 +52,7 @@ $(function () {
 
         //    console.log(donnees)
             // $.each(donnees, function (index, element) {
-                var temperature = "temperature pour aujourd'hui : " + donnees.main.temp 
+                var temperature = "temperature pour aujourd'hui : " + donnees.main.temp +"°"
                 var name = donnees.name
             //     var name = element.name
             $(".donnes").append("<h2>" + name + "</h2><br/>"  )
@@ -72,7 +73,7 @@ $(function () {
 
         //    console.log(donnees)
             // $.each(donnees, function (index, element) {
-                var temperature = "temperature pour aujourd'hui : " + donnees.main.temp 
+                var temperature = "temperature pour aujourd'hui : " + donnees.main.temp +"°"
                 var name =  donnees.name
             //     var name = element.name
             $(".donnes").append( "<h2>" + name + "</h2><br/>" )>
